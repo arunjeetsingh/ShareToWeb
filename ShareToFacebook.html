@@ -7,6 +7,19 @@
 <body>
     <div id="fb-root"></div>
     <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '70816401992',
+                xfbml: true,
+                version: 'v2.3'
+            });
+
+            FB.ui({
+                method: 'share',
+                href: 'https://developers.facebook.com/docs/',
+            }, function (response) { });
+        };
+
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -19,10 +32,7 @@
     <h1>Share to Facebook</h1>
     <!--<div class="fb-share-button" data-href="http://www.bing.com" data-layout="button_count"></div>-->
     <script>
-        FB.ui({
-            method: 'share',
-            href: 'https://developers.facebook.com/docs/',
-        }, function (response) { });
+        
     </script>
 </body>
 </html>
